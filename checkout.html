@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ثبت سفارش | H&A.HOME</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            H&A.HOME
+        </div>
+
+        <nav>
+            <a href="index.html">خانه</a>
+            <a href="index.html#products">محصولات</a>
+            <a href="index.html#about">درباره ما</a>
+            <a href="index.html#gallery">گالری</a>
+            <a href="index.html#faq">سوالات متداول</a>
+            <a href="index.html#contact">تماس با ما</a>
+        </nav>
+
+        <a href="cart.html" class="cart" aria-label="سبد خرید">
+            <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 8h12l1 12H5L6 8Z"></path>
+                <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+            </svg>
+            <span id="cart-count">0</span>
+        </a>
+
+    </header>
+
+
+    <!-- Checkout -->
+    <main class="checkout-page">
+
+    <h1>ثبت سفارش</h1>
+
+    <form id="checkout-form">
+
+        <div id="checkout-items"></div>
+
+        <div class="form-group">
+            <label for="name">نام و نام خانوادگی</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="نام و نام خانوادگی"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="phone">شماره موبایل</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="مثلاً 09121234567"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="address">آدرس</label>
+            <textarea
+                id="address"
+                name="address"
+                rows="4"
+                placeholder="آدرس کامل برای ارسال سفارش"
+                required
+            ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="description">توضیحات سفارش</label>
+            <textarea
+                id="description"
+                name="description"
+                rows="3"
+                placeholder="توضیحات اضافی (اختیاری)"
+            ></textarea>
+        </div>
+
+        <div class="shipping-options">
+
+            <h3>روش ارسال</h3>
+
+            <label class="shipping-option">
+                <input
+                    type="radio"
+                    name="shipping"
+                    value="post"
+                    data-cost="80000"
+                    checked
+                >
+                ارسال با پست — ۸۰,۰۰۰ تومان
+            </label>
+
+            <label class="shipping-option">
+                <input
+                    type="radio"
+                    name="shipping"
+                    value="courier"
+                    data-cost="150000"
+                >
+                ارسال با پیک — ۱۵۰,۰۰۰ تومان
+            </label>
+
+        </div>
+
+        <div class="checkout-total">
+            مبلغ قابل پرداخت:
+            <strong id="checkout-total">
+                ۰ تومان
+            </strong>
+        </div>
+
+        <button type="submit" class="submit-order">
+            ثبت سفارش
+        </button>
+
+    </form>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 H&A.HOME - تمامی حقوق محفوظ است.
+        </p>
+
+    <p><a href="privacy.html">حریم خصوصی</a> · <a href="terms.html">قوانین و شرایط</a></p>
+</footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

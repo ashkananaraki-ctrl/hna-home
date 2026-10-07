@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ورود مدیریت | H&A.Home</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="admin-login-page">
+
+        <div class="admin-login-box">
+
+            <h1>ورود به پنل مدیریت</h1>
+
+            <p>
+                H&A.Home
+            </p>
+
+            <form id="admin-login-form">
+
+                <input
+                    type="text"
+                    id="admin-username"
+                    placeholder="نام کاربری"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="admin-password"
+                    placeholder="رمز عبور"
+                    required
+                >
+
+                <button type="submit">
+                    ورود
+                </button>
+
+            </form>
+
+            <p id="login-message"></p>
+
+        </div>
+
+    </main>
+
+    <script>
+const form = document.getElementById('admin-login-form');
+const message = document.getElementById('login-message');
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  message.textContent = 'در حال ورود...';
+  try {
+    const response = await fetch('/api/admin/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'same-origin',
+      body: JSON.stringify({
+        username: document.getElementById('admin-username').value.trim(),
+        password: document.getElementById('admin-password').value
+      })
+    });
+    const result = await response.json();
+    if (!response.ok || !result.success) {
+      message.textContent = result.message || 'نام کاربری یا رمز عبور اشتباه است.';
+      return;
+    }
+    window.location.href = 'admin.html';
+  } catch (error) {
+    console.error(error);
+    message.textContent = 'ارتباط با سرور برقرار نشد.';
+  }
+});
+</script>
+
+</body>
+
+</html>

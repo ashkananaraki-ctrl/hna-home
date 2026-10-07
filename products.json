@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1791309269126,
+    "name": "شلف",
+    "price": 800000,
+    "category": "decor",
+    "image": "/images/cf4b2344-1913-4354-a989-97b0332cab6e.jpg"
+  },
+  {
+    "id": 1791309319311,
+    "name": "نارگیل",
+    "price": 200000,
+    "category": "candles",
+    "image": "/images/2ce1b35c-78a6-49a4-8173-e0bf058a5395.jpg"
+  }
+]

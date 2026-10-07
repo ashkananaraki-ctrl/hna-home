@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>پنل مدیریت | H&A.Home</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        H&A.Home
+    </div>
+
+    <nav>
+        <a href="index.html">خانه</a>
+        <a href="index.html#products">محصولات</a>
+        <a href="cart.html">سبد خرید</a>
+    </nav>
+<button
+    id="admin-logout-button"
+    type="button"
+>
+    خروج از پنل
+</button>
+</header>
+
+
+<main class="admin-page">
+
+    <h1>پنل مدیریت</h1>
+
+    <p class="admin-description">
+        سفارش‌های ثبت‌شده در H&A.Home
+    </p>
+<section class="admin-stats">
+
+    <div class="admin-stat-card">
+        <h3>کل سفارش‌ها</h3>
+        <strong id="total-orders">۰</strong>
+    </div>
+
+    <div class="admin-stat-card">
+        <h3>سفارش‌های جدید</h3>
+        <strong id="new-orders">۰</strong>
+    </div>
+
+    <div class="admin-stat-card">
+        <h3>در حال آماده‌سازی</h3>
+        <strong id="preparing-orders">۰</strong>
+    </div>
+
+    <div class="admin-stat-card">
+        <h3>ارسال‌شده</h3>
+        <strong id="shipped-orders">۰</strong>
+    </div>
+
+    <div class="admin-stat-card">
+        <h3>تکمیل‌شده</h3>
+        <strong id="completed-orders">۰</strong>
+    </div>
+
+    <div class="admin-stat-card">
+        <h3>مجموع فروش</h3>
+        <strong id="total-sales">۰ تومان</strong>
+    </div>
+
+</section>
+    <section class="admin-orders">
+
+        <h2>سفارش‌ها</h2>
+<div class="admin-order-filters">
+
+    <input
+        type="text"
+        id="order-search"
+        placeholder="جستجو نام مشتری یا شماره سفارش..."
+    >
+
+    <label for="order-status-filter">فیلتر وضعیت سفارش:</label>
+
+<select id="order-status-filter">
+
+        <option value="all">
+            همه سفارش‌ها
+        </option>
+
+        <option value="جدید">
+            جدید
+        </option>
+
+        <option value="در حال آماده‌سازی">
+            در حال آماده‌سازی
+        </option>
+
+        <option value="ارسال‌شده">
+            ارسال‌شده
+        </option>
+
+        <option value="تکمیل‌شده">
+            تکمیل‌شده
+        </option>
+
+    </select>
+
+</div>
+        <div id="admin-orders-list">
+            در حال بررسی سفارش‌ها...
+        </div>
+
+    </section>
+    </section>
+
+    <!-- مدیریت محصولات -->
+    <section class="admin-products">
+
+        <h2>مدیریت محصولات</h2>
+
+        <div class="admin-product-form">
+
+    <input
+        type="text"
+        id="product-name"
+        placeholder="نام محصول"
+    >
+
+    <input
+        type="number"
+        id="product-price"
+        placeholder="قیمت به تومان"
+        min="0"
+    >
+
+   <select id="product-category">
+    <option value="candles">شمع‌ها</option>
+    <option value="decor">دکوری</option>
+</select>
+
+   <label for="product-image">عکس محصول:</label>
+
+<input
+    type="file"
+    id="product-image"
+    accept="image/*"
+>
+
+    <button
+        type="button"
+        id="add-product-button"
+    >
+        افزودن محصول
+    </button>
+
+</div>
+
+        <div id="admin-products-list">
+            هنوز محصولی اضافه نشده است.
+        </div>
+
+    </section>
+
+    <section class="admin-reviews">
+        <h2>مدیریت نظرات و امتیازها</h2>
+        <p>نظرات مشتریان پس از بررسی شما در سایت نمایش داده می‌شوند.</p>
+        <div id="admin-reviews-list">در حال بررسی نظرات...</div>
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+        © 2026 H&A.Home - تمامی حقوق محفوظ است.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
